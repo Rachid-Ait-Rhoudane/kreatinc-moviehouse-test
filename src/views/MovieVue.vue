@@ -1,7 +1,6 @@
 <script setup>
 
-import MovieContainer from '@/components/MovieContainer.vue'
-import MovieCard from '@/components/MovieCard.vue'
+import ShowSearchResults from '../components/ShowSearchResults.vue'
 
 import MovieInformations from '@/components/MovieInformations.vue'
 import MovieVideos from '../components/MovieVideos.vue'
@@ -54,22 +53,7 @@ onMounted(() => {
 
     </div>
 
-    <div v-show="movieStore.SearchResultsMovies.length !== 0">
-
-        <MovieContainer title="Search results">
-
-            <movie-card 
-                    v-for="movie in movieStore.SearchResultsMovies" 
-                    :key="movie.id"
-                    :MovieID="movie.id"
-                    :MoviePoster="movie.poster_path"
-                    :MovieTitle="movie.original_title.slice(0, 20)" 
-                    :MovieRating="movie.vote_average"
-            />
-
-        </MovieContainer>
-
-    </div>
+    <ShowSearchResults />
 
 </template>
 

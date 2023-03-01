@@ -1,6 +1,7 @@
 <script setup>
 
 import LatestMoviesPagination from '@/components/LatestMoviesPagination.vue'
+import ShowSearchResults from '../components/ShowSearchResults.vue'
 import MovieContainer from '@/components/MovieContainer.vue'
 import MovieCard from '@/components/MovieCard.vue'
 import { useMovieStore } from '@/stores/movie.js'
@@ -52,22 +53,8 @@ onMounted(() => {
         </MovieContainer>
 
     </div>
-    <div v-show="movieStore.SearchResultsMovies.length !== 0">
 
-        <MovieContainer title="Search results">
-
-            <movie-card 
-                    v-for="movie in movieStore.SearchResultsMovies" 
-                    :key="movie.id"
-                    :MovieID="movie.id"
-                    :MoviePoster="movie.poster_path"
-                    :MovieTitle="movie.original_title.slice(0, 20)" 
-                    :MovieRating="movie.vote_average"
-            />
-
-        </MovieContainer>
-
-    </div>
+    <ShowSearchResults />
 
 </template>
 
