@@ -1,6 +1,7 @@
 <script setup>
 
-import ShowSearchResults from '../components/ShowSearchResults.vue'
+import ShowCurrentPageContent from '@/components/ShowCurrentPageContent.vue'
+import ShowSearchResults from '@/components/ShowSearchResults.vue'
 
 import MovieInformations from '@/components/MovieInformations.vue'
 import MovieVideos from '../components/MovieVideos.vue'
@@ -29,7 +30,7 @@ onMounted(() => {
 
 <template>
 
-    <div v-show="movieStore.SearchResultsMovies.length === 0">
+    <ShowCurrentPageContent>
 
         <section style="border: 1px solid #FF914D;" class="container p-4 m-4 mx-auto">
 
@@ -51,7 +52,7 @@ onMounted(() => {
 
         </section>
 
-    </div>
+    </ShowCurrentPageContent>
 
     <ShowSearchResults />
 

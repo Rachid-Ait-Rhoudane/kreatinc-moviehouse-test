@@ -1,5 +1,6 @@
 <script setup>
 
+import ShowCurrentPageContent from '@/components/ShowCurrentPageContent.vue'
 import ShowSearchResults from '../components/ShowSearchResults.vue'
 import MovieContainer from '@/components/MovieContainer.vue'
 import MovieCard from '@/components/MovieCard.vue'
@@ -17,7 +18,7 @@ onMounted(() => {
 
 <template>
 
-    <div v-show="movieStore.SearchResultsMovies.length === 0">
+    <ShowCurrentPageContent>
 
         <MovieContainer title="Watchlist">
 
@@ -32,7 +33,7 @@ onMounted(() => {
 
         </MovieContainer>
 
-    </div>
+    </ShowCurrentPageContent>
 
     <ShowSearchResults />
 

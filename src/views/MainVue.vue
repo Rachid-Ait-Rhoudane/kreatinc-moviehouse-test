@@ -1,5 +1,6 @@
 <script setup>
 
+import ShowCurrentPageContent from '@/components/ShowCurrentPageContent.vue'
 import LatestMoviesPagination from '@/components/LatestMoviesPagination.vue'
 import ShowSearchResults from '../components/ShowSearchResults.vue'
 import MovieContainer from '@/components/MovieContainer.vue'
@@ -20,7 +21,7 @@ onMounted(() => {
 
 <template>
 
-    <div v-show="movieStore.SearchResultsMovies.length === 0">
+    <ShowCurrentPageContent>
 
         <MovieContainer title="Most Popular movies">
 
@@ -52,7 +53,7 @@ onMounted(() => {
 
         </MovieContainer>
 
-    </div>
+    </ShowCurrentPageContent>
 
     <ShowSearchResults />
 
