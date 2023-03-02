@@ -1,3 +1,8 @@
+:root{
+  --swiper-theme-color: #FF914D !important;
+}
+
+
 body
 {
   background-color: black;
