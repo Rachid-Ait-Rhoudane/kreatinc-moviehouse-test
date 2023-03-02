@@ -3,6 +3,7 @@
 import MovieContainer from '@/components/MovieContainer.vue'
 import MovieCard from '@/components/MovieCard.vue'
 import { useMovieStore } from '@/stores/movie.js'
+import CloseSearchResults from './CloseSearchResults.vue'
 
 let movieStore = useMovieStore()
 
@@ -13,6 +14,10 @@ let movieStore = useMovieStore()
     <div v-show="movieStore.SearchResultsMovies.length !== 0">
 
         <MovieContainer title="Search results">
+
+            <template #close>
+                <CloseSearchResults />
+            </template>
 
             <movie-card 
                     v-for="movie in movieStore.SearchResultsMovies" 

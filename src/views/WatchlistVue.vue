@@ -18,6 +18,8 @@ onMounted(() => {
 
 <template>
 
+    <ShowSearchResults />
+
     <ShowCurrentPageContent>
 
         <MovieContainer title="Watchlist">
@@ -34,8 +36,6 @@ onMounted(() => {
         </MovieContainer>
 
     </ShowCurrentPageContent>
-
-    <ShowSearchResults />
 
 </template>
 

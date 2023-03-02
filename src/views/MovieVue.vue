@@ -18,18 +18,22 @@ const router = useRouter()
 const id = router.currentRoute.value.query.id
 
 onMounted(() => {
+
     movieStore.MovieID = id
     movieStore.getMovie()
     movieStore.getCast()
     movieStore.getVideos()
     movieStore.getImages()
     movieStore.getReviews()
+
 })
 
 </script>
 
 <template>
 
+    <ShowSearchResults />
+    
     <ShowCurrentPageContent>
 
         <section style="border: 1px solid #FF914D;" class="container p-4 m-4 mx-auto">
@@ -53,8 +57,6 @@ onMounted(() => {
         </section>
 
     </ShowCurrentPageContent>
-
-    <ShowSearchResults />
 
 </template>
 

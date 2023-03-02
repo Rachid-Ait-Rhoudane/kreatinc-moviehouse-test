@@ -21,6 +21,8 @@ onMounted(() => {
 
 <template>
 
+    <ShowSearchResults />
+    
     <ShowCurrentPageContent>
 
         <MovieContainer title="Most Popular movies">
@@ -54,8 +56,6 @@ onMounted(() => {
         </MovieContainer>
 
     </ShowCurrentPageContent>
-
-    <ShowSearchResults />
 
 </template>
 

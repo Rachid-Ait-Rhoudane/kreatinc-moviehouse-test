@@ -8,10 +8,7 @@ let movieStore = useMovieStore()
 
 <template>
 
-    <div v-show="movieStore.SearchResultsMovies.length === 0">
-        <slot></slot>
-
-    </div>
+    <slot></slot>
 
 </template>
 

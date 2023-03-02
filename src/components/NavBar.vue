@@ -76,8 +76,6 @@ let movieStore = useMovieStore()
                                 </select>
 
                                 <button @click="movieStore.search()"  type="button" class="search-button">Search</button>
-                                <button @click="movieStore.cancelSearching()"  type="button" class="search-button ms-2">Cancel</button>
-                                
                            </form>
                         </div>
                     </li>
